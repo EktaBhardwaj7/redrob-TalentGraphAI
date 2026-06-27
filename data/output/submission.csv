@@ -1,0 +1,101 @@
+candidate_id,rank,score,reasoning
+CAND_0092278,1,0.9464,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0033861,2,0.9409,Matched retrieval/ranking technology: qdrant.
+CAND_0077337,3,0.9125,Matched retrieval/ranking technology: qdrant. Production experience: shipped. Profile: 7.0 years.
+CAND_0018499,4,0.9123,Matched retrieval/ranking technology: faiss.
+CAND_0081846,5,0.9120,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0041611,6,0.9104,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0093547,7,0.9090,Matched retrieval/ranking technology: faiss. Production experience: deployed.
+CAND_0008425,8,0.9088,Matched retrieval/ranking technology: qdrant. Production experience: deployed. Profile: 7.8 years.
+CAND_0046525,9,0.9078,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 6.1 years.
+CAND_0007411,10,0.9068,Matched retrieval/ranking technology: pinecone. Production experience: deployed. Profile: 8.0 years. consistency: consistent.
+CAND_0055905,11,0.9056,Matched retrieval/ranking technology: faiss. Production experience: deployed. Profile: 8.1 years.
+CAND_0094759,12,0.8984,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0086022,13,0.8967,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 5.3 years.
+CAND_0005260,14,0.8950,Matched retrieval/ranking technology: faiss. Production experience: deployed. Profile: 5.2 years.
+CAND_0046064,15,0.8931,Matched retrieval/ranking technology: faiss. Production experience: deployed.
+CAND_0039754,16,0.8752,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0011687,17,0.8747,Matched retrieval/ranking technology: faiss. Production experience: deployed. Profile: 7.8 years.
+CAND_0002025,18,0.8544,Matched retrieval/ranking technology: faiss. Production experience: deployed.
+CAND_0071974,19,0.8429,Matched retrieval/ranking technology: qdrant. Production experience: deployed. Concerns: No retrieval/ranking evidence.
+CAND_0028793,20,0.8344,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 7.2 years.
+CAND_0010685,21,0.8341,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 6.7 years. consistency: consistent.
+CAND_0005649,22,0.8337,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0027801,23,0.8337,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 7.4 years.
+CAND_0042029,24,0.8332,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0083879,25,0.8325,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 7.1 years. consistency: consistent.
+CAND_0070398,26,0.8323,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 7.2 years. consistency: consistent.
+CAND_0044883,27,0.8318,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 6.3 years.
+CAND_0030953,28,0.8309,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0011162,29,0.8265,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0077285,30,0.8221,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0039838,31,0.8115,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 4.9 years.
+CAND_0006418,32,0.8104,Matched retrieval/ranking technology: qdrant. Production experience: shipped. Concerns: No retrieval/ranking evidence.
+CAND_0022812,33,0.8034,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0010770,34,0.7977,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 15.2 years. consistency: consistent.
+CAND_0057701,35,0.7949,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 4.1 years.
+CAND_0076831,36,0.7927,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 4.0 years.
+CAND_0056881,37,0.7866,Matched retrieval/ranking technology: pinecone. Production experience: shipped. Profile: 4.5 years. consistency: consistent. Concerns: No retrieval/ranking evidence.
+CAND_0009837,38,0.7778,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 4.3 years. consistency: consistent.
+CAND_0064270,39,0.7735,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 4.2 years. consistency: consistent. penalties: 0 warnings.
+CAND_0017960,40,0.7465,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 7.7 years.
+CAND_0044222,41,0.7465,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 7.7 years. consistency: consistent.
+CAND_0083307,42,0.7456,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 7.8 years.
+CAND_0007009,43,0.7446,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 7.9 years.
+CAND_0079387,44,0.7413,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 6.9 years. consistency: consistent.
+CAND_0043228,45,0.7411,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 6.8 years. consistency: consistent. Signal: saves=65.
+CAND_0061265,46,0.7404,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 6.6 years. consistency: consistent.
+CAND_0046924,47,0.7385,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 6.3 years. consistency: consistent. penalties: 0 warnings.
+CAND_0094056,48,0.7344,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 5.9 years. consistency: consistent.
+CAND_0053591,49,0.7335,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0093912,50,0.7335,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 5.3 years. consistency: consistent.
+CAND_0058575,51,0.7326,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 5.8 years. consistency: consistent.
+CAND_0052827,52,0.7323,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 5.9 years. consistency: consistent. penalties: 0 warnings.
+CAND_0027691,53,0.7313,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 6.5 years. consistency: consistent. Notice period: notice_period=15d.
+CAND_0076251,54,0.7307,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 7.6 years. consistency: consistent. Signal: open_to_work.
+CAND_0037000,55,0.7301,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 2.7 years. consistency: consistent.
+CAND_0080766,56,0.7286,Matched retrieval/ranking technology: milvus. Production experience: shipped. Profile: 8.8 years. consistency: consistent. Notice period: notice_period=0d. penalties: 0 warnings.
+CAND_0066999,57,0.7275,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 5.9 years. consistency: consistent.
+CAND_0081053,58,0.7272,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 5.4 years. consistency: consistent.
+CAND_0042100,59,0.7256,Matched retrieval/ranking technology: pinecone. Production experience: shipped. Profile: 7.3 years. consistency: consistent. Concerns: No retrieval/ranking evidence.
+CAND_0045250,60,0.7252,Matched retrieval/ranking technology: qdrant. Production experience: shipped. Profile: 6.6 years. consistency: consistent. Concerns: No retrieval/ranking evidence.
+CAND_0060072,61,0.7251,Matched retrieval/ranking technology: qdrant. Production experience: shipped. Concerns: No retrieval/ranking evidence.
+CAND_0036437,62,0.7242,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 4.8 years.
+CAND_0030031,63,0.7230,Matched retrieval/ranking technology: milvus. Production experience: shipped. Profile: 5.7 years. consistency: consistent. Concerns: No retrieval/ranking evidence.
+CAND_0013536,64,0.7221,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 14.1 years. consistency: consistent.
+CAND_0099806,65,0.7201,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 4.6 years.
+CAND_0098217,66,0.7179,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 6.4 years. consistency: consistent. Signal: open_to_work.
+CAND_0053695,67,0.7177,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 5.8 years. consistency: consistent. Notice period: notice_period=15d.
+CAND_0060054,68,0.7174,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 6.4 years. consistency: consistent. Notice period: notice_period=15d.
+CAND_0039383,69,0.7173,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 7.1 years. consistency: consistent. Signal: open_to_work. penalties: 0 warnings.
+CAND_0032515,70,0.7153,Matched retrieval/ranking technology: milvus. Production experience: shipped. Profile: 5.1 years. consistency: consistent. Concerns: No retrieval/ranking evidence.
+CAND_0091909,71,0.7133,Matched retrieval/ranking technology: qdrant. Production experience: shipped. Profile: 6.9 years. consistency: consistent. Concerns: No retrieval/ranking evidence.
+CAND_0010257,72,0.7119,Matched retrieval/ranking technology: qdrant. Production experience: shipped. Profile: 6.5 years. consistency: consistent. Concerns: No retrieval/ranking evidence.
+CAND_0087364,73,0.7115,Matched retrieval/ranking technology: qdrant. Production experience: shipped. Concerns: No retrieval/ranking evidence.
+CAND_0007088,74,0.7079,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 4.4 years. consistency: consistent.
+CAND_0000031,75,0.7073,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 6.0 years. consistency: consistent. Signal: open_to_work.
+CAND_0025971,76,0.7037,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 5.4 years. consistency: consistent. penalties: 0 warnings.
+CAND_0048509,77,0.7037,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 4.2 years. consistency: consistent.
+CAND_0020708,78,0.7031,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 4.2 years. consistency: consistent.
+CAND_0092245,79,0.7010,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 4.1 years. consistency: consistent.
+CAND_0088025,80,0.6992,Matched retrieval/ranking technology: pinecone. Production experience: shipped. Profile: 8.6 years. consistency: consistent. Concerns: No retrieval/ranking evidence.
+CAND_0033911,81,0.6986,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 6.9 years. consistency: consistent. penalties: 0 warnings. Signal: response_rate=0.76.
+CAND_0033987,82,0.6984,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 6.8 years. consistency: consistent. Signal: open_to_work. penalties: 0 warnings.
+CAND_0043958,83,0.6981,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 6.7 years. consistency: consistent. penalties: 0 warnings. Signal: response_rate=0.67.
+CAND_0033405,84,0.6928,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 4.7 years. consistency: consistent. Signal: open_to_work.
+CAND_0002793,85,0.6925,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 5.5 years. consistency: consistent. Notice period: notice_period=30d. penalties: 0 warnings.
+CAND_0013613,86,0.6923,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 4.7 years. consistency: consistent. Signal: saves=51.
+CAND_0001610,87,0.6865,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 3.0 years. consistency: consistent.
+CAND_0074339,88,0.6828,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 5.3 years. consistency: consistent. Signal: open_to_work. penalties: 0 warnings.
+CAND_0014063,89,0.6799,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 5.4 years. Signal: open_to_work. penalties: 0 warnings. consistency: ML skills but non-technical title. Concerns: ML skills but non-technical title.
+CAND_0087744,90,0.6759,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 3.9 years. consistency: consistent. Notice period: notice_period=30d.
+CAND_0067111,91,0.6737,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 3.9 years. consistency: consistent. Signal: open_to_work. penalties: 0 warnings.
+CAND_0070653,92,0.6727,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 5.0 years. Notice period: notice_period=30d. penalties: 0 warnings. consistency: ML skills but non-technical title. Concerns: ML skills but non-technical title.
+CAND_0010000,93,0.6612,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 3.2 years. consistency: consistent. Signal: open_to_work.
+CAND_0006557,94,0.6593,Matched retrieval/ranking technology: faiss. Production experience: shipped. Profile: 7.9 years.
+CAND_0041669,95,0.6582,Matched retrieval/ranking technology: faiss. Production experience: shipped.
+CAND_0047721,96,0.6560,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 7.0 years. consistency: consistent.
+CAND_0062247,97,0.6555,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 7.3 years. consistency: consistent.
+CAND_0044855,98,0.6551,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 6.6 years. consistency: consistent.
+CAND_0069905,99,0.6551,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 6.6 years. consistency: consistent.
+CAND_0052335,100,0.6518,Matched retrieval/ranking technology: faiss. Production experience: production. Profile: 6.4 years. consistency: consistent. Signal: open_to_work.

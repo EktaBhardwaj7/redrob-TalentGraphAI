@@ -1,0 +1,16 @@
+project: TalentGraph AI
+challenge: Redrob Intelligent Candidate Discovery & Ranking Challenge
+version: 1.0.0
+runtime:
+  language: Python
+  network: disabled
+  hardware: CPU only
+entrypoint: python rank.py --candidates data/raw/candidates/candidates.jsonl --jd data/raw/jd/job_description.docx --out data/output/submission.csv
+output:
+  file: data/output/submission.csv
+  columns:
+    - candidate_id
+    - rank
+    - score
+    - reasoning
+notes: Deterministic capability-based ranking with evidence-backed reasoning.
