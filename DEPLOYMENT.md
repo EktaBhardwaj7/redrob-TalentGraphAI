@@ -21,62 +21,41 @@ No GPU is required. No network calls are made during ranking.
 
 After pushing this repository to GitHub, create a Binder link in this format:
 
-```text
-https://mybinder.org/v2/gh/<GITHUB_USERNAME>/<REPO_NAME>/HEAD
 ```
-
-Example:
-
-```text
-https://mybinder.org/v2/gh/your-username/Redrob-TalentGraphAI/HEAD
+https://mybinder.org/v2/gh/EktaBhardwaj7/redrob-TalentGraphAI/HEAD
 ```
-
 If you want Binder to open JupyterLab directly:
 
-```text
-https://mybinder.org/v2/gh/<GITHUB_USERNAME>/<REPO_NAME>/HEAD?urlpath=lab
 ```
-
-## Command Reviewers Should Run
-
-Inside Binder's terminal, run:
+https://mybinder.org/v2/gh/<EktaBhardwaj7>/<redrob-TalentGraphAI>/HEAD?urlpath=lab
+```
+Command Reviewers Should Run
+Inside Binder's terminal, run the following command to rank all candidates in the sample file (provided as sample_candidates.jsonl). The sample is small enough to run quickly without any --limit argument.
 
 ```bash
 python rank.py \
-  --candidates data/raw/candidates/candidates.jsonl \
+  --candidates data/raw/candidates/sample_candidates.jsonl \
   --jd data/raw/jd/job_description.docx \
-  --out data/output/submission.csv
-```
+  --out data/output/test_submission.csv
+  ```
+This will generate test_submission.csv containing the ranked results for the sample.
 
-For a faster smoke test:
-
+To validate the output (checks correct format and rank coverage), run:
 ```bash
-python rank.py \
-  --candidates data/raw/candidates/candidates.jsonl \
-  --jd data/raw/jd/job_description.docx \
-  --out data/output/submission.csv \
-  --limit 100
+python data/raw/submission/validate_submission.py data/output/test_submission.csv
 ```
+The rank.py script also automatically invokes the validator after writing the CSV, so you may see validation output directly.
 
-Then validate:
+Note: The sample file contains a small number of candidates (currently ~50). Do not use --limit with a value larger than the file size, or validation will fail (it expects exactly that many rows). If you need to test with fewer candidates, you can set --limit N where N is less than or equal to the total entries in the sample.
 
-```bash
-python data/raw/submission/validate_submission.py data/output/submission.csv
-```
-
-or use the internal validator automatically called by `rank.py`.
-
-## Local Reproducibility
-
-From a fresh local checkout:
-
+Local Reproducibility
+From a fresh local checkout (using the full candidates.jsonl file, not the sample):
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python rank.py --candidates data/raw/candidates/candidates.jsonl --jd data/raw/jd/job_description.docx --out data/output/submission.csv
 ```
-
 On Windows PowerShell:
 
 ```powershell
@@ -85,23 +64,3 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 python rank.py --candidates data/raw/candidates/candidates.jsonl --jd data/raw/jd/job_description.docx --out data/output/submission.csv
 ```
-
-## Submission Metadata
-
-Use this as the reproduce command in the submission portal:
-
-```bash
-python rank.py --candidates data/raw/candidates/candidates.jsonl --jd data/raw/jd/job_description.docx --out data/output/submission.csv
-```
-
-Use the Binder URL as the sandbox link.
-
-## Final Checklist
-
-- Push the repository to GitHub.
-- Confirm `requirements.txt` and `runtime.txt` are included.
-- Open the Binder URL and wait for the environment to build.
-- Run the smoke test with `--limit 100`.
-- Run the full ranking command.
-- Confirm `data/output/submission.csv` exists.
-- Submit the GitHub repo link, Binder link, reproduce command, and CSV.
