@@ -51,6 +51,21 @@ EVIDENCE_MAP = {
     "ml infrastructure": EvidenceRule(IMPLICIT, frozenset({"production_ml"})),
 }
 
+EVIDENCE_MAP.update({
+    "hybrid retrieval": EvidenceRule(RELATED, frozenset({"retrieval"})),
+    "reranking": EvidenceRule(DIRECT, frozenset({"ranking"})),
+    "offline evaluation": EvidenceRule(RELATED, frozenset({"evaluation"})),
+    "embedding drift": EvidenceRule(RELATED, frozenset({"retrieval", "production_ml"})),
+    "index refresh": EvidenceRule(RELATED, frozenset({"retrieval", "production_ml"})),
+    "online a/b": EvidenceRule(DIRECT, frozenset({"evaluation"})),
+    "eval framework": EvidenceRule(RELATED, frozenset({"evaluation"})),
+    "ml pipeline": EvidenceRule(RELATED, frozenset({"production_ml"})),
+    "feature store": EvidenceRule(RELATED, frozenset({"production_ml"})),
+    "kubernetes": EvidenceRule(RELATED, frozenset({"production_ml"})),
+    "docker": EvidenceRule(RELATED, frozenset({"production_ml"})),
+    "spark": EvidenceRule(RELATED, frozenset({"production_ml", "inference_optimization"})),
+})
+
 REQUIRED_CAPS = ["retrieval", "ranking", "evaluation", "vector_db", "production_ml"]
 PREFERRED_CAPS = ["llm_finetuning", "learning_to_rank", "hrtech", "inference_optimization"]
 ALL_CAPS = frozenset(REQUIRED_CAPS + PREFERRED_CAPS)

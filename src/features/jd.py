@@ -1,4 +1,4 @@
-# jd.py
+# src/features/jd.py
 import re
 from typing import Any, Dict
 
@@ -24,7 +24,10 @@ class JDFeature(Feature):
         for phrase, rule in context.evidence_map.items():
             if phrase in state.matched_evidence:
                 matched_evidence.append((rule.weight, phrase, rule.capabilities))
+                # Only consider capabilities that are required (in cap_scores)
                 for cap in rule.capabilities:
+                    if cap not in cap_scores:
+                        continue
                     if rule.weight > cap_scores[cap]:
                         cap_scores[cap] = rule.weight
                     cap_evidences[cap].append((phrase, rule.weight))
