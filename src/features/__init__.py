@@ -1,19 +1,29 @@
-# features/__init__.py
+# src/features/__init__.py
 from .base import Feature
-from .registry import register_feature, get_all_features, create_features
+from .registry import create_features, register_feature
 
-from . import jd
-from . import production
-from . import experience
-from . import market
-from . import hireability
-from . import consistency
-from . import preferred
-from . import penalties
+# Register all features by importing them
+from .jd import JDFeature
+from .production import ProductionFeature
+from .experience import ExperienceFeature
+from .consistency import ConsistencyFeature
+from .market import MarketFeature
+from .hireability import HireabilityFeature
+from .preferred import PreferredFeature
+from .penalties import PenaltiesFeature
+from .honeypot import HoneypotFeature  # <-- added
 
 __all__ = [
     "Feature",
-    "register_feature",
-    "get_all_features",
     "create_features",
+    "register_feature",
+    "JDFeature",
+    "ProductionFeature",
+    "ExperienceFeature",
+    "ConsistencyFeature",
+    "MarketFeature",
+    "HireabilityFeature",
+    "PreferredFeature",
+    "PenaltiesFeature",
+    "HoneypotFeature",
 ]

@@ -10,17 +10,15 @@ def generate_reasoning(state: CandidateState) -> str:
             if ev.confidence >= 0.5:
                 all_evidence.append(ev)
 
-    # Sort by confidence descending
     all_evidence.sort(key=lambda e: e.confidence, reverse=True)
 
     if not all_evidence:
         return "Limited evidence found for the role."
 
-    # Build a coherent summary
     parts = []
     seen_topics = set()
 
-    for ev in all_evidence[:8]:  # limit to 8 items
+    for ev in all_evidence[:8]:
         topic = ev.source
         if topic in seen_topics:
             continue
@@ -42,8 +40,30 @@ def generate_reasoning(state: CandidateState) -> str:
         else:
             parts.append(f"{ev.source}: {ev.value}")
 
-    # Add warnings if present
     if state.warnings:
         parts.append(f"Concerns: {', '.join(state.warnings[:2])}")
 
-    return ". ".join(parts) + "."
+    # --- New: synthesising conclusion ---
+    # Determine overall fit based on jd_coverage and production
+    jd_score = state.features.get("jd_coverage", None)
+    prod_score = state.features.get("production", None)
+    hire_score = state.features.get("hireability", None)
+    fit_words = []
+    if jd_score and jd_score.normalized_score >= 0.6:
+        fit_words.append("strong match for the required capabilities")
+    else:
+        fit_words.append("partial match for required capabilities")
+    if prod_score and prod_score.normalized_score >= 0.5:
+        fit_words.append("with production experience")
+    else:
+        fit_words.append("with limited production evidence")
+    if hire_score and hire_score.normalized_score >= 0.6:
+        fit_words.append("and good availability signals")
+    else:
+        fit_words.append("and potential availability concerns")
+
+    conclusion = f"Overall, candidate shows {', '.join(fit_words)}."
+
+    # Combine and return
+    main_text = ". ".join(parts) + "."
+    return f"{main_text} {conclusion}"

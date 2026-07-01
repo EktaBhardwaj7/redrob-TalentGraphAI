@@ -25,7 +25,7 @@ python data/raw/submission/validate_submission.py data/output/submission.csv
 This repository is Binder-ready. After pushing it to GitHub, open it with:
 
 ```text
-https://mybinder.org/v2/gh/<EktaBhardwaj7>/<redrob-TalentGraphAI>/HEAD?urlpath=lab
+https://mybinder.org/v2/gh/EktaBhardwaj7/redrob-TalentGraphAI/HEAD?urlpath=lab
 ```
 
 Then run the same ranking command from the Binder terminal. See `DEPLOYMENT.md`

@@ -1,9 +1,7 @@
-# scoring_v1.py
 from dataclasses import dataclass
 
 VERSION = "v1"
 
-# Explicit order for feature execution (must match registered feature names)
 FEATURE_ORDER = [
     "jd_coverage",
     "production",
@@ -13,9 +11,9 @@ FEATURE_ORDER = [
     "hireability",
     "preferred_match",
     "penalties",
+    "honeypot",
 ]
 
-# Weights for tier assignment (primary ranking)
 TIER_WEIGHTS = {
     "jd_coverage": 0.40,
     "production": 0.20,
@@ -23,7 +21,6 @@ TIER_WEIGHTS = {
     "consistency": 0.07,
 }
 
-# Weights for fine-grained ordering within tier
 FINE_WEIGHTS = {
     "market_validation": 0.10,
     "hireability": 0.05,
@@ -32,11 +29,11 @@ FINE_WEIGHTS = {
 
 FEATURE_WEIGHTS = {**TIER_WEIGHTS, **FINE_WEIGHTS}
 FEATURE_WEIGHTS["penalties"] = 0.05
+FEATURE_WEIGHTS["honeypot"] = 0.0   # dummy weight, used separately for penalty
 
-PENALTIES = {
-    "disqualifier": -0.20,
-}
+assert abs(sum(FEATURE_WEIGHTS.values()) - 1.0) < 1e-6, "Weights must sum to 1.0"
 
+PENALTIES = {"disqualifier": -0.20}
 
 @dataclass(frozen=True)
 class ExperienceTarget:
@@ -44,8 +41,7 @@ class ExperienceTarget:
     ideal: float
     maximum: float
 
-
-EXPERIENCE_TARGET = ExperienceTarget(minimum=3.0, ideal=7.0, maximum=12.0)
+EXPERIENCE_TARGET = ExperienceTarget(minimum=4.0, ideal=7.0, maximum=9.0)
 
 SCORING_CONFIG = {
     "tier": TIER_WEIGHTS,

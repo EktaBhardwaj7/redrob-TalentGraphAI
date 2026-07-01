@@ -1,6 +1,5 @@
-"""Diagnostics helpers for TalentGraph AI."""
+"""Diagnostics package exports."""
 
-from src.diagnostics.feature_statistics import feature_statistics
-from src.diagnostics.score_distribution import score_distribution
+from src.diagnostics.score_distribution import generate_full_report
 
-__all__ = ["feature_statistics", "score_distribution"]
+__all__ = ["generate_full_report"]

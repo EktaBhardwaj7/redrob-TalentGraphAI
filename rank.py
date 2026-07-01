@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
-# rank.py
+# rank.py (modified sections)
+
 import argparse
 import logging
 from pathlib import Path
@@ -11,6 +11,8 @@ from src.common.streaming import stream_candidates
 from src.preprocess.parse_jd import parse_jd
 from src.pipeline.writer import write_submission
 from src.pipeline.submission_validator import validate_submission
+# Import the diagnostic function
+from src.diagnostics.score_distribution import generate_full_report
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -23,6 +25,7 @@ def main():
     parser.add_argument("--out", default="data/output/submission.csv", help="Output CSV path")
     parser.add_argument("--config", default="v1", help="Config version")
     parser.add_argument("--limit", type=int, help="Limit candidates (for testing)")
+    parser.add_argument("--diagnostics", default="data/output/diagnostics/report.json", help="Path for diagnostic report (JSON)")
     args = parser.parse_args()
 
     config = load_config(args.config)
@@ -36,6 +39,11 @@ def main():
         candidates = itertools.islice(candidates, args.limit)
 
     results = engine.rank(candidates)
+
+    # Generate diagnostic report
+    generate_full_report(results, context, args.diagnostics)
+    logger.info(f"Diagnostic report written to {args.diagnostics}")
+
     write_submission(results, args.out)
     logger.info(f"Written {len(results)} candidates to {args.out}")
 

@@ -47,16 +47,22 @@ def compute_final_state(state: CandidateState, context: RankingContext) -> Score
     tier_score = compute_tier_score(state, context)
     fine_score = compute_fine_score(state, context)
 
-    # Apply penalties (negative)
+    # Get penalties from the dedicated feature
     penalty_feature = state.features.get("penalties")
     penalties = penalty_feature.normalized_score if penalty_feature else 0.0
 
-    final_score = max(0.0, min(1.0, tier_score + penalties))
+    # Get honeypot penalty
+    honeypot_feature = state.features.get("honeypot")
+    honeypot_penalty = honeypot_feature.normalized_score if honeypot_feature else 0.0
 
+    # Combine penalties (both are already negative)
+    total_penalty = penalties + honeypot_penalty
+
+    final_score = max(0.0, min(1.0, tier_score + total_penalty))
     return ScoreBreakdown(
         feature_results=state.features,
         tier_score=tier_score,
         fine_score=fine_score,
-        penalties=penalties,
+        penalties=total_penalty,           # store combined penalty
         final_score=final_score,
     )

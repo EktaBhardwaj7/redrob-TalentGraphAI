@@ -1,4 +1,8 @@
 # consistency.py
+
+
+import warnings
+
 from src.models.feature_result import FeatureResult
 from src.models.evidence_item import EvidenceItem
 from src.models.candidate_state import CandidateState
@@ -39,6 +43,11 @@ class ConsistencyFeature(Feature):
         if has_ml_skill and "engineer" not in title and "scientist" not in title:
             warnings.append("ML skills but non-technical title")
             score -= 0.05
+        
+        technical_titles = ["engineer", "scientist", "developer", "architect", "researcher"]
+        if any(t in title for t in technical_titles) and not has_ml_skill:
+            warnings.append("Technical title but no ML/DS skills")
+            score -= 0.05  # also penalise
 
         exp_years = state.raw.get("profile", {}).get("years_of_experience", 0)
         if exp_years > 40:
